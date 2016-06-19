@@ -43,9 +43,9 @@ infbot/scripts
 
 First, we define exports.
 
-export HUBOT_CHATWORK_TOKEN="[API_KEY]"
-export HUBOT_CHATWORK_ROOMS="[ROOM_ID]"   # if we write some ROOM_ID , we use comma.
-export HUBOT_CHATWORK_API_RATE="350"
+    export HUBOT_CHATWORK_TOKEN="[API_KEY]"
+    export HUBOT_CHATWORK_ROOMS="[ROOM_ID]"   # if we write some ROOM_ID , we use comma.
+    export HUBOT_CHATWORK_API_RATE="350"
 
 
 ### Configuration
