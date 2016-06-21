@@ -14,7 +14,7 @@ module.exports = (robot) ->
   robot.respond /what is this (.*)/i, (msg) ->
     msg.send "This is #{msg.match[1]}"
 
-  robot.respond /おはよう/i, (msg) ->
+  robot.hear /おはよう/i, (msg) ->
     msg.send "今日もよろしくお願いします"
 
   robot.hear /私は誰/i, (msg) ->
