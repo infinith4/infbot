@@ -21,4 +21,4 @@ module.exports = (robot) ->
     msg.send "あなたは #{msg.message.user.name}"
 
   robot.hear /あなたは誰/i, (msg) ->
-    msg.send "私はinfbot!"
+    msg.send "私はinfbot♡"
