@@ -16,6 +16,9 @@ module.exports = (robot) ->
 
   robot.hear /おはよう/i, (msg) ->
     msg.send "今日もよろしくお願いします"
+  
+  robot.hear /おはよー/i, (msg) ->
+    msg.send "今日もよろしくお願いします"
 
   robot.hear /私は誰/i, (msg) ->
     msg.send "あなたは #{msg.message.user.name}"
