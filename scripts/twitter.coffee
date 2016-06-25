@@ -8,5 +8,6 @@ module.exports = (robot) ->
                           .query(q: keyword)
                           .get()
     request (err, res, body) ->
+      console.log body
       json = JSON.parse body
       msg.send json.results[0].text if json.results.length > 0

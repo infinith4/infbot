@@ -7,7 +7,7 @@ json = require 'json-file'
 config = json.read('./.config.json')
 
 module.exports = (robot) ->
-  new cronJob('0,20,40 0-40 1 * * *', () =>
+  new cronJob('0 0 1 * * *', () =>
     console.log config.get('rooms').tashiro
     envelope = room: config.get('rooms').tashiro
     child_process.exec "ruby ./scripts/ext_scripts/notify-child.rb", (error, stdout, stderr) ->
