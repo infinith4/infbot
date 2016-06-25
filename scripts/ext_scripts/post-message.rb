@@ -1,7 +1,7 @@
 require 'faraday'
 require './scripts/ext_scripts/appconfig.rb'
 
-ROOM_ID = AppConfig.rooms.tashiro
+ROOM_ID = ARGV[0]
 CHATWORK_TOKEN = AppConfig.apikey.chatwork
 
 conn = Faraday::Connection.new(url: 'https://api.chatwork.com') do |builder|
