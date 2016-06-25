@@ -3,7 +3,7 @@
 
 cronJob = require('cron').CronJob
 module.exports = (robot) ->
-  new cronJob('0 30 7 * * 3', () =>
+  new cronJob('0 50 23 * * *', () =>
     envelope = room: process.env.HUBOT_CHATWORK_ROOMS
-    robot.send envelope, "今日は水曜日です。Clean Upの日です"
+    robot.send envelope, "0時になります。そろそろ寝る時間です"
   ).start()

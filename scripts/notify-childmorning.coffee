@@ -5,8 +5,8 @@ cronJob = require('cron').CronJob
 child_process = require 'child_process'
 
 module.exports = (robot) ->
-  new cronJob('0 10-20 22 * * 1-5', () =>
-    envelope = room: "52230684"
+  new cronJob('0 0 8 * * 1-5', () =>
+    envelope = room: process.env.HUBOT_CHATWORK_ROOMS
     child_process.exec "ruby ./scripts/ext_scripts/notify-child.rb", (error, stdout, stderr) ->
       if !error
         output = stdout+''

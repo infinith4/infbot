@@ -2,6 +2,7 @@
 #   Say hello.
 
 module.exports = (robot) ->
+  envelope = room: process.env.HUBOT_CHATWORK_ROOMS
   robot.hear /who are you/i, (msg) ->
     msg.send "I'm hubot!"
 
@@ -16,7 +17,7 @@ module.exports = (robot) ->
 
   robot.hear /おはよう/i, (msg) ->
     msg.send "今日もよろしくお願いします"
-  
+
   robot.hear /おはよー/i, (msg) ->
     msg.send "今日もよろしくお願いします"
 
