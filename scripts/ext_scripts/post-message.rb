@@ -1,5 +1,5 @@
 require 'faraday'
-require './appconfig.rb'
+require './scripts/ext_scripts/appconfig.rb'
 
 ROOM_ID = AppConfig.rooms.tashiro
 CHATWORK_TOKEN = AppConfig.apikey.chatwork
