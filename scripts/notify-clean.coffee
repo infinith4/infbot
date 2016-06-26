@@ -19,13 +19,13 @@ module.exports = (robot) ->
     mymod.find()
       .then (result)->
         console.log result
-        robot.send envelope, "担当は#{result}"
+        robot.send envelope, "担当は#{result}です。"
       .catch (error)->
         console.log "error", error
     mymod.update()
       .then (result)->
         console.log result
-        robot.send envelope, "DB update#{result}"
+        #robot.send envelope, "DB update#{result}"
       .catch (error)->
         console.log "error", error
   ).start()
