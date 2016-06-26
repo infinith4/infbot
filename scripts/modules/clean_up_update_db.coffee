@@ -1,3 +1,12 @@
+# js2coffee scripts/sequelize.js > scripts/sequelize.coffee
+
+# CREATE USER infinith4 IDENTIFIED BY PASSWORD 'infinith4';
+#
+# mysql> use infbot_db;
+# mysql> GRANT ALL PRIVILEGES ON *.* TO infinith4@localhost IDENTIFIED BY 'infinith4' WITH GRANT OPTION;
+# mysql> FLUSH PRIVILEGES;
+# INSERT INTO clean_up VALUES (1, 'A', '2016-06-21 22:30:00', '2016-06-21 22:30:00');
+
 # ここはrequire()された時点で実行される
 console.log "モジュールをロード中"
 moment = require 'moment'
