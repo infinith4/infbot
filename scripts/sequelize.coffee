@@ -31,6 +31,12 @@ sequelize.sync().then(->
 ).then (jane) ->
   console.log jane.get(plain: true)
   return
+# Users.find({where:{uid:1}}).success (person) ->
+#   console.log person.uid
+
+Users.findAll().then (person) ->
+  for item in person
+    console.log item.uid
 
 # sequelize.sync().complete(function() {
 #   return Users.find({ where: {name: 'janedoe'} })
