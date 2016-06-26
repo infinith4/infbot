@@ -3,7 +3,7 @@
 # require './scripts/clean_up_update_db.js'
 cronJob = require('cron').CronJob
 module.exports = (robot) ->
-  new cronJob('0,20,40 * 12-14 * * *', () =>
+  new cronJob('30 30 7 * * *', () =>
     envelope = room: process.env.HUBOT_CHATWORK_ROOMS
     robot.send envelope, "今日は水曜日です。Clean Upの日です"
     mymod = require './modules/clean_up_update_db'
