@@ -4,6 +4,8 @@
 cronJob = require('cron').CronJob
 module.exports = (robot) ->
   new cronJob('0 0 12 * * *', () =>
-    envelope = room: process.env.HUBOT_CHATWORK_ROOMS
-    robot.send envelope, "12時になりました！Lunch食べましょう！"
+    roomIds = process.env.HUBOT_CHATWORK_ROOMS.split(",")
+    for roomId, i in roomIds
+      envelope = room: roomId
+      robot.send envelope, "12時になりました！Lunch食べましょう！"
   ).start()

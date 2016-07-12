@@ -6,3 +6,5 @@
 youtube-download*
 .hubot_history
 *.log
+\#*#
+/logmon/
