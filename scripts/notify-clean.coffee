@@ -6,7 +6,6 @@ module.exports = (robot) ->
   new cronJob('30 30 7 * * 3', () =>
     roomIds = process.env.HUBOT_CHATWORK_ROOMS.split(",")
     for roomId, i in roomIds
-      #console.log "#{i}: #{val}"
       envelope = room: roomId
       robot.send envelope, "今日は水曜日です。Clean Upの日です"
       mymod = require './modules/clean_up_update_db'
