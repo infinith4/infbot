@@ -8,7 +8,6 @@ module.exports = (robot) ->
   new cronJob('0 0 8 * * 1-5', () =>
     roomIds = process.env.HUBOT_CHATWORK_ROOMS.split(",")
     for roomId, i in roomIds
-      #console.log "#{i}: #{val}"
       envelope = room: roomId
       child_process.exec "ruby ./scripts/ext_scripts/notify-child.rb", (error, stdout, stderr) ->
         if !error
